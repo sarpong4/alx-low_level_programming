@@ -23,13 +23,13 @@ int main(void)
 	{
 		printf("is greater than 5\n");
 	}
-	else if (last < 6 && last > 0)
+	else if (last == 0)
 	{
-		printf("is less than 6 and not 0\n");
+		printf("is 0\n");
 	}
 	else
 	{
-		printf("is 0\n");
+		printf("is less than 6 and not 0\n");
 	}
 	return (0);
 }
