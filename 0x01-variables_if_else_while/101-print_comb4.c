@@ -11,7 +11,7 @@
 /* printing */
 int main(void)
 {
-       	/* main function */
+	/* main function */
 	int i, j, k;
 
 	i = 48;
@@ -33,7 +33,7 @@ int main(void)
 				}
 				k++;
 			}
-			j++;			
+			j++;
 		}
 		i++;
 	}
