@@ -9,7 +9,6 @@
 int main(void)
 {
 	int i, j;
-	
 	i = 0;
 	while (i <= 99)
 	{
