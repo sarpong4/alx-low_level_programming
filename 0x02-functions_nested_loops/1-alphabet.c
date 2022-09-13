@@ -2,10 +2,9 @@
 
 /**
  * main - Entry point
- * 
+ *
  * Return: Always 0 (Success)
- **/
-/* printing */
+ */
 void print_alphabet(void)
 {
 	/* main  */
