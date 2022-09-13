@@ -10,8 +10,8 @@
 int main(void)
 {
 	/* main  */
-       char c[] = "_putchar";
-       int i;
+	char c[] = "_putchar";
+	int i;
 
 	for (i = 0; i < 8; i++)
 	{
@@ -19,5 +19,5 @@ int main(void)
 	}
 	_putchar('\n');
 
-	return 0;
+	return (0);
 }
