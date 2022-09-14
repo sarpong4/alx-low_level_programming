@@ -3,7 +3,7 @@
 /**
  * _islower - Entry point
  *
- * @c - int value of character to be checked.
+ * @c: int value of character to be checked.
  *
  * Return: Always 0 (Success)
  */
