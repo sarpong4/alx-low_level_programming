@@ -9,6 +9,7 @@ void print_alphabet_x10(void)
 {
 	/* main  */
 	int i, h;
+
 	h = 0;
 
 	while (h < 10)
