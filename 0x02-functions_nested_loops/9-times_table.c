@@ -17,20 +17,26 @@ void times_table(void)
 			k = m - 48;
 			l = n - 48;
 			prod = k * l;
+			
+			if (n != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (n == 0)
+			{
+				_putchar('0');
+			}
 
-			if (prod >= 10)
+			else if (prod >= 10)
 			{
 				_putchar((prod / 10) + '0');
 				_putchar((prod % 10) + '0');
 			}
-			else
+			else if ((prod < 10) && (n != 0))
 			{
-				_putchar((prod % 10) + '0');
-			}
-			if (m != n)
-			{
-				_putchar(',');
 				_putchar(' ');
+				_putchar((prod % 10) + '0');
 			}
 		}
 		_putchar('\n');
