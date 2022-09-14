@@ -1,19 +1,17 @@
 #include <unistd.h>
 
 /**
- * _islower - Entry point
+ * _isalpha - Entry point
+ *
+ * @c: int value of character to be checked.
  *
  * Return: Always 0 (Success)
  */
 /* printing */
-int _isalpha(int c) 
+int _isalpha(int c)
 {
 	/* main  */
 	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-	{
 		return (1);
-	}
-	else {
-		return (0);
-	}
+	return (0);
 }
