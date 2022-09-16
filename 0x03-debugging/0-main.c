@@ -13,20 +13,7 @@ int main(void)
 	/* main function */
 	int n;
 
-	n = positive_or_negative(0);
+	positive_or_negative(i);
 
-	/* your code goes there */
-	if (n > 0)
-	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
-	}
 	return (0);
 }
