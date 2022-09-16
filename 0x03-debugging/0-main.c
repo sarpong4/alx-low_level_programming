@@ -13,7 +13,8 @@ int main(void)
 	/* main function */
 	int n;
 
-	positive_or_negative(i);
+	n = 0;
+	positive_or_negative(n);
 
 	return (0);
 }
