@@ -1,1 +1,4 @@
-0x00. C - Hello, World.
+0x00. C - Hello, World
+0x01. VARIABLES, IF-ELSE, WHILE
+0X02. FUNCTIONS, NESTED LOOPS
+
