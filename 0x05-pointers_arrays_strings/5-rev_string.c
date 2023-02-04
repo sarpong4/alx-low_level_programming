@@ -9,12 +9,19 @@
 
 void rev_string(char *s)
 {
-	while (*s != '\0')
-		s++;
-	s = s - 1;
-	while (*s != '\0')
+	int l, i;
+	char ch;
+
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
 	{
-		_putchar(*s);
-		s--;
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
 	}
+
 }
