@@ -4,7 +4,7 @@
 
 /**
  * main - generate random password
- * Return: returns integer on success
+ * Return: Always 0 on success
  */
 int main(void)
 {
@@ -30,3 +30,4 @@ int main(void)
 	}
 
 	return (0);
+}
