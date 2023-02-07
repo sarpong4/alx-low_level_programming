@@ -10,33 +10,30 @@
 
 int find_strlen(char *s)
 {
-	int len;
+	int len = 0;
 
-	for (len = 0; s[len] != '\0'; ++len)
-		;
+	if (*(s + len))
+	{
+		len++;
+		len += find_strlen(s + len);
+	}
 	return (len);
 }
 
 /**
- * _str_reverse - reverses the given string.
- * @s: The string to be reversed.
- * @i: the first index of the string
- * @x: length of string
+ * match_with_reverse - compares s with its reverse.
+ * @s: The string to be matched.
+ * @l: length of the string
  *
- * Return: char *.
+ * Return: length of the string.
  */
-char *_str_reverse(char *s)
+int match_with_reverse(char *s, int l)
 {
-	char * res;
-	while (*s != '\0')
-	       s++;
-	s = s- 1;
-	while (*s != '\0')
-	{
-		res += *s;
-		s--;
-	}
-	return res;
+	if (*s != *(s + l))
+		return (0);
+	else if (*a == 0)
+		return (1);
+	return (match_with_reverse(s + 1, l - 2));
 	
 }
 
@@ -46,26 +43,22 @@ char *_str_reverse(char *s)
  *
  * Return: 1 if is palindrome, 0 otherwise.
  */
-/*
+
 int is_palindrome(char *s)
 {
-	*int x;
-	*x = find_strlen(s);
-	if (!*s)
-		return (0);
+	int len;
 	
-	_str_reverse(s, find_strlen(s), 0);
-	
-	printf("%s\n", s);
-	return (find_strlen(s));
-}*/
+	len = find_strlen(s);
+	return (match_with_revers(s, len));
+}
 
 int main(void){
 
 	char *st = "reverser";
 	int x = find_strlen(st);
 	printf("Before: %s\n", st);
-	char *s = _str_reverse(st);
-	printf("After: %s\n", s);
+	
+	int val = is_palindrome(st);
+	printf("Finale: %d\n", val);
 	return (0);
 }
