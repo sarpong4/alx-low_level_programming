@@ -38,5 +38,5 @@ int _sqrt_recursion(int n)
   int root;
 	root = 0;
   
-  return find_sqrt(num, root);
+  return find_sqrt(n, root);
 }
