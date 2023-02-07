@@ -24,19 +24,24 @@ int find_strlen(char *s)
 /**
  * _str_reverse - reverses the given string.
  * @s: The string to be reversed.
- *
+ * @i: the first index of the string
  * Return: char *.
  */
-void _str_reverse(char *s, int x)
+void _str_reverse(char *s, int i)
 {
+	int x;
 	char temp;
 	
-	if (*s)
+	x = find_strlen(s);
+	if (!(x % 2))
+		x += 1;
+	
+	if ( i < x / 2)
 	{
-		temp = *s;
-		*s  = s + x;
-		s + x = temp;
-		_str_reverse(s, x - 1);
+		temp = s[i];
+		s[i] = s[x - i - 1];
+		s[x - i - 1] = temp;
+		_str_reverse(s,  i + 1);
 	}
 }
 
