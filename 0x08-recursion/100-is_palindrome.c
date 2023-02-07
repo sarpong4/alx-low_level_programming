@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * find_strlen - Returns the length of a string.
@@ -28,7 +29,7 @@ int find_strlen(char *s)
  */
 void _str_reverse(char *s, int x)
 {
-	char *temp;
+	char temp;
 	
 	if (*s)
 	{
@@ -49,14 +50,14 @@ void _str_reverse(char *s, int x)
 int is_palindrome(char *s)
 {
 	/*int x;*/
-	char *rev;
 
 	/*x = find_strlen(s);*/
 	
 	if (!*s)
 		return (0);
 	
-	rev = _str_reverse(s);
+	_str_reverse(s);
 	
+	printf("%s\n", s);
 	return (find_strlen(rev));
 }
