@@ -41,10 +41,10 @@ char *_str_reverse(char *s)
 
 int is_palindrome(char *s)
 {
-	int x;
+	/*int x;*/
 	char *rev;
 
-	x = find_strlen(s);
+	/*x = find_strlen(s);*/
 	
 	if (!*s)
 		return (0);
