@@ -29,7 +29,7 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-void _str_reverse(char *s, int x, int i)
+/*void _str_reverse(char *s, int x, int i)
 {
 	char temp, *start, *end;
 
@@ -56,8 +56,7 @@ void _str_reverse(char *s, int x, int i)
 		end--;
 	}
 	printf("%s", s);
-	return;
-}
+}*/
 
 /**
  * is_palindrome - checks if a string is a palindrome.
@@ -84,7 +83,30 @@ int main(void){
 	char *st = "reverser";
 	int x = find_strlen(st);
 	printf("In main: %d\n", x);
-	_str_reverse(st, x, 0);
+	
+	char temp, *start, *end;
+
+	int i;
+	printf("%d, %d\n", 0, x);
+
+	start = st;
+	end = st;
+
+	for (int j = 0; j < x-1; j++)
+		end++;
+	printf("End: %s\n", end);
+
+	for (i = 0; i < x / 2; i++)
+	{
+		temp = end;
+		*end = *start;
+		*start = temp;
+		printf("%c\n", temp);
+		printf("%s\n", start);
+		printf("%s\n", end);
+		start++;
+		end--;
+	}
 	printf("%s", st);
 	return (0);
 }
