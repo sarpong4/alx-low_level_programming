@@ -31,7 +31,7 @@ int match_with_reverse(char *s, int l)
 {
 	if (*s != *(s + l))
 		return (0);
-	else if (*a == 0)
+	else if (*s == 0)
 		return (1);
 	return (match_with_reverse(s + 1, l - 2));
 	
@@ -49,7 +49,7 @@ int is_palindrome(char *s)
 	int len;
 	
 	len = find_strlen(s);
-	return (match_with_revers(s, len));
+	return (match_with_reverse(s, len));
 }
 
 int main(void){
