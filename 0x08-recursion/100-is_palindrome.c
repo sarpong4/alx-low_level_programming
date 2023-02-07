@@ -8,16 +8,12 @@
  * Return: The length of the string.
  */
 
-int find_strlen(char *s)
+int find_strlen(char *s, int len)
 {
-	int len = 0;
 
-	if (*(s + len))
-	{
-		len++;
-		len += find_strlen(s + len);
-	}
-	return (len);
+	if (*s == 0)
+		return (len - 1);
+	return (find_strlen(s + 1, len + 1));
 }
 
 /**
@@ -29,6 +25,7 @@ int find_strlen(char *s)
  */
 int match_with_reverse(char *s, int l)
 {
+	printf("Try: %d\n", *(s+l));
 	if (*s != *(s + l))
 		return (0);
 	else if (*s == 0)
@@ -48,14 +45,14 @@ int is_palindrome(char *s)
 {
 	int len;
 	
-	len = find_strlen(s);
+	len = find_strlen(s, 0);
 	return (match_with_reverse(s, len));
 }
 
 int main(void){
 
 	char *st = "reverser";
-	int x = find_strlen(st);
+	int x = find_strlen(st, 0);
 	printf("Before: %s\n", st);
 	
 	int val = is_palindrome(st);
