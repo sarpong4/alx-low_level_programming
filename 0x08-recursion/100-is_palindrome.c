@@ -25,16 +25,18 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-void _str_reverse(char *s)
+char *_str_reverse(char *s)
 {
+	char * res;
 	while (*s != '\0')
 	       s++;
 	s = s- 1;
 	while (*s != '\0')
 	{
-		putchar(*s);
+		res += *s;
 		s--;
 	}
+	return res;
 	
 }
 
@@ -63,7 +65,7 @@ int main(void){
 	char *st = "reverser";
 	int x = find_strlen(st);
 	printf("Before: %s\n", st);
-	_str_reverse(st);
-	printf("After: %s\n", st);
+	char *s = _str_reverse(st);
+	printf("After: %s\n", s);
 	return (0);
 }
