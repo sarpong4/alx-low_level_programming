@@ -64,5 +64,5 @@ int is_palindrome(char *s)
 	_str_reverse(s, 0);
 	
 	printf("%s\n", s);
-	return (find_strlen(rev));
+	return (find_strlen(s));
 }
