@@ -34,7 +34,7 @@ void _str_reverse(char *s)
 	if (*s)
 	{
 		_str_reverse(s + 1);
-		printf("%s\n", *s);
+		putchar(*s);
 	}
 }
 
