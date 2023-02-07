@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * find_strlen - Returns the length of a string.
@@ -50,15 +49,4 @@ int is_palindrome(char *s)
 	
 	len = find_strlen(s);
 	return (match_with_reverse(s, len));
-}
-
-int main(void){
-
-	char *st = "reverser";
-	int x = find_strlen(st);
-	printf("Before: %s\n", st);
-	
-	int val = is_palindrome(st);
-	printf("Finale: %d\n", val);
-	return (0);
 }
