@@ -29,34 +29,14 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-/*void _str_reverse(char *s, int x, int i)
+void _str_reverse(char *s)
 {
-	char temp, *start, *end;
-
-	i = 0;
-	x = x - 1;
-	printf("%d, %d\n", i, x);
-
-	start = s;
-	end = s;
-
-	for (int j = 0; j < x; j++)
-		end++;
-	printf("%s\n", end);
-
-	for (i = 0; i < x / 2; i++)
+	if (*s)
 	{
-		temp = *end;
-		*end = *start;
-		*start = temp;
-		printf("%c\n", temp);
-		printf("%s\n", start);
-		printf("%s\n", end);
-		start++;
-		end--;
+		_str_reverse(s + 1);
+		printf("%s\n", *s);
 	}
-	printf("%s", s);
-}*/
+}
 
 /**
  * is_palindrome - checks if a string is a palindrome.
@@ -82,31 +62,8 @@ int main(void){
 
 	char *st = "reverser";
 	int x = find_strlen(st);
-	printf("In main: %d\n", x);
-	
-	char temp, *start, *end;
-
-	int i;
-	printf("%d, %d\n", 0, x);
-
-	start = st;
-	end = st;
-
-	for (int j = 0; j < x-1; j++)
-		end++;
-	printf("End: %s\n", end);
-
-	for (i = 0; i < x / 2; i++)
-	{
-		temp = *end;
-		*end = *start;
-		*start = temp;
-		printf("%c\n", temp);
-		printf("%s\n", start);
-		printf("%s\n", end);
-		start++;
-		end--;
-	}
-	printf("%s", st);
+	printf("Before: %s\n", st);
+	_str_reverse(st);
+	printf("After: %s\n", st);
 	return (0);
 }
