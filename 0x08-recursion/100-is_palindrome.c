@@ -66,3 +66,10 @@ int is_palindrome(char *s)
 	printf("%s\n", s);
 	return (find_strlen(s));
 }
+
+int main(){
+	char *st = "reverser";
+	_str_reverse(st);
+	printf("%s", st);
+	return (0);
+}
