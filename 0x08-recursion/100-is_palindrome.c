@@ -98,7 +98,7 @@ int main(void){
 
 	for (i = 0; i < x / 2; i++)
 	{
-		temp = end;
+		temp = *end;
 		*end = *start;
 		*start = temp;
 		printf("%c\n", temp);
