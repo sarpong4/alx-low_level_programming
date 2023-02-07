@@ -24,7 +24,6 @@ int find_strlen(char *s, int len)
  */
 int match_with_reverse(char *s, int l)
 {
-	printf("Try: %d\n", *(s+l));
 	if (*s != *(s + l))
 		return (0);
 	else if (*s == 0)
