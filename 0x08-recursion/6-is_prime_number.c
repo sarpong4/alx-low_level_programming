@@ -14,12 +14,12 @@ int is_prime_number(int n);
 
 int is_divisible(int num, int div)
 {
-  int x;
+	int x;
   
 	if (num % div == 0)
 		return (1);
-  
-  x = num / 2;
+	
+	x = num / 2;
 
 	if (div == x)
 		return (0);
@@ -37,11 +37,13 @@ int is_divisible(int num, int div)
 
 int is_prime_number(int n)
 {
-  int div;
-  
-  div = 2;
-  if (is_divisible(n, div))
-    return (0);
-  else
-    return (1);
+	int div;
+
+	div = 2;
+	if (n == 1)
+		return (0);
+	if (is_divisible(n, div))
+		return (0);
+	else
+		return (1);
 }
