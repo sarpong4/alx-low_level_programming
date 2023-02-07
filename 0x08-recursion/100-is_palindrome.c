@@ -31,6 +31,6 @@ int is_palindrome(char *s)
 {
 	int x;
 	
-	x = find_strlen(&s);
+	x = find_strlen(s);
 	return (x);
 }
