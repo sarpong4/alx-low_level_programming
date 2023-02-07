@@ -26,17 +26,17 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-char *_str_reverse(char *s)
+void _str_reverse(char *s, int x)
 {
-	char *res;
+	char *temp;
 	
-	res = '';
 	if (*s)
 	{
-		res += (_str_reverse(s + 1));
-		res += *s;
+		temp = *s;
+		*s  = s + x;
+		s + x = temp;
+		_str_reverse(s, x - 1);
 	}
-	return res;
 }
 
 /**
