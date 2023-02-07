@@ -64,7 +64,7 @@ int main(void){
 	char *st = "reverser";
 	int x = find_strlen(st);
 	printf("Before: %s\n", st);
-	_str_reverse(st, x, 0);
+	_str_reverse(st);
 	printf("After: %s\n", st);
 	return (0);
 }
