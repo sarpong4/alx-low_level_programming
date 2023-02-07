@@ -6,7 +6,6 @@ int factorial(int n);
 int find_strlen(char *s);
 int is_prime_number(int n);
 int is_palindrome(char *s);
-int is_divisible(int num, int div);
 int is_prime_number(int n);
 void iterate_wild(char **wildstr);
 int strlen_no_wilds(char *str);
