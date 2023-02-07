@@ -29,12 +29,16 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-void _str_reverse(char *s)
+void _str_reverse(char *s, int len, int ix)
 {
-	if (*s)
+	char temp;
+	
+	if (ix < len / 2)
 	{
-		_str_reverse(s + 1);
-		//putchar(*s);
+		temp = s[ix];
+		s[ix] = s[len - 1 - ix];
+		s[len - 1 - ix] = temp;
+		_str_reverse(s, len, ix + 1);
 	}
 }
 
@@ -63,7 +67,7 @@ int main(void){
 	char *st = "reverser";
 	int x = find_strlen(st);
 	printf("Before: %s\n", st);
-	_str_reverse(st);
+	_str_reverse(st, x, 0);
 	printf("After: %s\n", st);
 	return (0);
 }
