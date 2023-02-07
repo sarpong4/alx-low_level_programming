@@ -10,14 +10,10 @@
 
 int find_strlen(char *s)
 {
-	int len = 0;
+	int len;
 
-	if (*(s + len))
-	{
-		len++;
-		len += find_strlen(s + len);
-	}
-
+	for (len = 0; s[len] != '\0'; ++len)
+		;
 	return (len);
 }
 
@@ -29,16 +25,17 @@ int find_strlen(char *s)
  *
  * Return: char *.
  */
-void _str_reverse(char *s, int len, int ix)
+void _str_reverse(char *s)
 {
+	int l, i;
 	char temp;
 	
-	if (ix < len / 2)
+	l = find_strlen(s);
+	for (i = 0; i < l / 2; ++i)
 	{
-		temp = s[ix];
-		s[ix] = s[len - 1 - ix];
-		s[len - 1 - ix] = temp;
-		_str_reverse(s, len, ix + 1);
+		temp = s[i];
+		s[i] = s[l-1-i];
+		s[l-1-i] = temp;
 	}
 }
 
