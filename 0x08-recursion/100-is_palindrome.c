@@ -29,7 +29,7 @@ int find_strlen(char *s)
 char *_str_reverse(char *s)
 {
 	if (*s)
-		return (_str_reverse(s + 1) + *s);
+		return (_str_reverse(s + 1) + &s);
 }
 
 /**
