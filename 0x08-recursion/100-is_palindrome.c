@@ -30,6 +30,7 @@ char *_str_reverse(char *s)
 {
 	char *res;
 	
+	res = '';
 	if (*s)
 	{
 		res += (_str_reverse(s + 1));
