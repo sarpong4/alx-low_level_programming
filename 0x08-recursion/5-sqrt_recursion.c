@@ -36,11 +36,11 @@ int find_sqrt(int num, int root)
 int _sqrt_recursion(int n)
 {
 	int root;
-	root = 0;
 	
+	root = 0;
 	if (n == 1)
 		return (1);
 	if (n <= 0)
 		return (-1);
-	return find_sqrt(n, root);
+	return (find_sqrt(n, root));
 }
