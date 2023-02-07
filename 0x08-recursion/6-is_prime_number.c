@@ -19,10 +19,7 @@ int is_divisible(int num, int div)
 	if (num % div == 0)
 		return (1);
   
-  x = _sqrt_recursion(num);
-  
-  if (x == -1)
-    x = num / 2;
+  x = num / 2;
 
 	if (div == x)
 		return (0);
