@@ -6,9 +6,8 @@
  * @argc: length of arguments
  * @argv: arguments provided
  *
- * Return: (0)
+ * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int a, b, product;
@@ -27,3 +26,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
