@@ -2,28 +2,23 @@
 #include <stdlib.h>
 
 /**
- * main - print the product of 2 numbers from the arguments provided. If no arguments or one argument only, print Error.
- * @argc: length of arguments
- * @argv: arguments provided
- *
+ * main - program that prints its name, followed by a new line
+ * @argc: argument that counts argument input
+ * @argv: argument that stores the strings in an array of char* (strings)
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int a, b, product;
+	int num_1, num_2, mul;
 
 	if (argc != 3)
-	{
 		printf("Error\n");
-		return (1);
-	}
 	else
 	{
-		a = atoi(argv[1]);
-		b = atoi(argv[2]);
-		product = a * b;
-		printf("%d\n", product);
+		num_1 = atoi(argv[1]);
+		num_2 = atoi(argv[2]);
+		mul = num_1 * num_2;
+		printf("%d\n", mul);
 	}
 	return (0);
 }
-
