@@ -1,38 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 
 /**
- * all_nums - checks if all arguments are nums
- * @args: the array of arguments to be checked
- * @i: starting index
- * @end: length of the array
- * @status: the value to be returned,
+ * main - adds numbers
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
  *
- * Return: 1 if all are nums, 0 otherwise
+ * Return: 0 if no errors, else 1
  */
-
-int all_nums(char *args[], int i, int end, int status)
-{
-	if (i != end)
-	{
-		if (atoi(args[i]) != 0)
-			status += 1;:
-		print_args(args, i + 1, end);
-	}
-	return (status == end - 1);
-}
-
-/**
- * main - prints all arguments provided
- * @argc: Number of arguments provided
- * @argv: Arguments provided
- *
- * Return: always (0)
- */
-
 int main(int argc, char *argv[])
 {
-	print_args(argv, 0, argc);
+	int a = 0, i, j;
+
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j]; j++)
+		{
+			if (isdigit(argv[i][j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+	}
+	for (i = 1; i < argc; i++)
+	{
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
 	return (0);
 }
